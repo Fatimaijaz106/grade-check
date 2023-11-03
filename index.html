@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="./style.css">
+<head>
+    <title>Grade Checking App</title>
+    <script>
+        function checkGrade() {
+            var input = document.getElementById('percentInput').value;
+
+            if (input >= 80) {
+                document.getElementById('result').innerHTML = 'Grade: A+';
+            }
+            else if (input >= 70) {
+                document.getElementById('result').innerHTML = 'Grade: A';
+            }
+            else if (input >= 60) {
+                document.getElementById('result').innerHTML = 'Grade: B';
+            }
+            else if (input >= 50) {
+                document.getElementById('result').innerHTML = 'Grade: C';
+            }
+            else {
+                document.getElementById('result').innerHTML = 'Grade: F';
+            }
+        }
+    </script>
+</head>
+<body class="main">
+    <div>
+    <h2 class="one">Grade Checking App</h2>
+    <form class="one1" onsubmit="return false;">
+        <label class="one2" for="percentInput">Enter percentage (0-100):</label>
+        <input class="one4" type="number" id="percentInput" name="percentInput" min="0" max="100" required>
+        <input class="one3" type="submit" value="Check Grade" onclick="checkGrade()">
+    </form>
+    <div class="one5" id="result"></div>
+</div>
+</body>
+</html>
